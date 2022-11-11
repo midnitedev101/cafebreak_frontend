@@ -22,26 +22,26 @@ import {
 } from 'components';
 import styles from 'styles/pages/_Home.module.scss';
 import { pageTitle } from 'utils';
-import useNodePagination from 'hooks/useNodePagination';
+// import useNodePagination from 'hooks/useNodePagination';
 
 const postsPerPage = 1;
 
-const POST_NODES_PREPASS_FIELDS = [
-  'databaseId',
-  'id',
-  '__typename',
-  'featuredImage.*',
-  'featuredImage.node.altText',
-  'featuredImage.node.mediaDetails.width',
-  'featuredImage.node.mediaDetails.height',
-  'featuredImage.node.sourceUrl',
-  'author.node.name',
-  'date',
-  'uri',
-  'title',
-  'slug',
-  'summary',
-];
+// const POST_NODES_PREPASS_FIELDS = [
+//   'databaseId',
+//   'id',
+//   '__typename',
+//   'featuredImage.*',
+//   'featuredImage.node.altText',
+//   'featuredImage.node.mediaDetails.width',
+//   'featuredImage.node.mediaDetails.height',
+//   'featuredImage.node.sourceUrl',
+//   'author.node.name',
+//   'date',
+//   'uri',
+//   'title',
+//   'slug',
+//   'summary',
+// ];
 
 export default function Page() {
   const { useQuery, usePosts } = client;
