@@ -1,4 +1,4 @@
-import Image from 'next/image';
+// import Image from 'next/image';
 import { classNames as cn } from 'utils';
 
 import styles from './FeaturedImage.module.scss';
@@ -16,7 +16,7 @@ export default function FeaturedImage({
   image,
   width,
   height,
-  ...props
+  // ...props
 }) {
   let src;
   if (image?.sourceUrl instanceof Function) {

@@ -10,7 +10,7 @@ import {
   EntryHeader,
   Main,
   SEO,
-  TaxonomyTerms,
+  // TaxonomyTerms,
 } from 'components';
 import { pageTitle } from 'utils';
 

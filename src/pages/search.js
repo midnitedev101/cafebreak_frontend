@@ -10,7 +10,7 @@ import {
   Header,
   Main,
   SearchInput,
-  SearchRecommendations,
+  // SearchRecommendations,
   SearchResults,
   SEO,
 } from 'components';

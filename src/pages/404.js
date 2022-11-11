@@ -27,7 +27,7 @@ export default function Page() {
         <EntryHeader title="Page Not Found" />
         <div className="container small">
           <p className="text-center">
-            Not the content you're looking for. Use the search field below to help.
+            Not the content you&apos;re looking for. Use the search field below to help.
           </p>
 
           <form

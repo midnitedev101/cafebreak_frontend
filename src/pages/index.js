@@ -5,18 +5,18 @@
 import { getNextStaticProps } from '@faustjs/next';
 import React from 'react';
 import { client } from 'client';
-import { FaArrowRight } from 'react-icons/fa';
+// import { FaArrowRight } from 'react-icons/fa';
 import {
   HomePost,
   Header,
   Footer,
   EntryHeader,
   Main,
-  LoadMore,
-  Button,
+  // LoadMore,
+  // Button,
   Heading,
-  CTA,
-  Testimonials,
+  // CTA,
+  // Testimonials,
   SEO,
   Sidebar,
 } from 'components';
@@ -61,10 +61,10 @@ export default function Page() {
 
   // const { useQuery } = client;
   const generalSettings = useQuery().generalSettings;
-  const { data, fetchMore, isLoading } = useNodePagination(
-    (query, queryArgs) => query.posts(queryArgs),
-    POST_NODES_PREPASS_FIELDS
-  );
+  // const { data, fetchMore, isLoading } = useNodePagination(
+  //   (query, queryArgs) => query.posts(queryArgs),
+  //   POST_NODES_PREPASS_FIELDS
+  // );
   
   return (
     <>

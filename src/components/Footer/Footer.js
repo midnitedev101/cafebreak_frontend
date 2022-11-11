@@ -1,14 +1,14 @@
 import * as MENUS from 'constants/menus';
 
 import appConfig from 'app.config';
-import {
-  FaFacebookF,
-  FaGithub,
-  FaInstagram,
-  FaLinkedinIn,
-  FaTwitter,
-  FaYoutube,
-} from 'react-icons/fa';
+// import {
+//   FaFacebookF,
+//   FaGithub,
+//   FaInstagram,
+//   FaLinkedinIn,
+//   FaTwitter,
+//   FaYoutube,
+// } from 'react-icons/fa';
 import Image from 'next/image';
 import Link from 'next/link';
 import { NavigationMenu } from 'components';

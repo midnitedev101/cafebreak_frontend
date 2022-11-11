@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Heading, FeaturedImage, PostInfo } from 'components';
+import { Heading, FeaturedImage } from 'components';
 import appConfig from 'app.config';
 import useFocusFirstNewResult from 'hooks/useFocusFirstNewResult';
 
