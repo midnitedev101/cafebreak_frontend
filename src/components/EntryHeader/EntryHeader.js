@@ -18,22 +18,24 @@ export default function EntryHeader({ title, image, date, author, className }) {
 
   return (
     <div className={entryHeaderClasses}>
-      {hasText && (
-        <div className={styles['text']}>
-          {!!title && <Heading className={styles['title']}>{title}</Heading>}
-          <PostInfo className={styles['byline']} author={author} date={date} />
-        </div>
-      )}
-
       {image && (
         <div className={styles['image']}>
           <div className="container">
             <FeaturedImage
               className={styles['featured-image']}
               image={image}
+              width={1200}
+              height={600}
               priority
             />
           </div>
+        </div>
+      )}
+
+      {hasText && (
+        <div className={styles['text']}>
+          {!!title && <Heading className={styles['title']}>{title}</Heading>}
+          <PostInfo className={styles['byline']} author={author} date={date} />
         </div>
       )}
     </div>

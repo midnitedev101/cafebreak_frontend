@@ -2,11 +2,11 @@
 
 .entry-header {
   margin-bottom: 2rem;
-  color: var(--color-white);
+  color: var(--color-black);
   background-color: var(--color-primary);
 
   @media (min-width: $breakpoint-small) {
-    margin-bottom: 10rem;
+    margin-bottom: 0rem;
   }
 }
 
@@ -50,4 +50,7 @@
 
 .featured-image {
   margin: 0;
+  img {
+    height: auto;
+  }
 }

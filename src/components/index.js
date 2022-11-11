@@ -7,6 +7,7 @@ import Footer from './Footer';
 import FormatDate from './FormatDate';
 import Header from './Header';
 import Heading from './Heading';
+import HomePost from './HomePost';
 import LoadingSearchResult from './LoadingSearchResult';
 import LoadMore from './LoadMore';
 import Main from './Main';
@@ -17,6 +18,7 @@ import SearchInput from './SearchInput';
 import SearchRecommendations from './SearchRecommendations';
 import SearchResults from './SearchResults';
 import SEO from './SEO';
+import Sidebar from './Sidebar';
 import SkipNavigationLink from './SkipNavigationLink';
 import TaxonomyTerms from './TaxonomyTerms';
 import Testimonials from './Testimonials';
@@ -31,6 +33,7 @@ export {
   FormatDate,
   Header,
   Heading,
+  HomePost,
   LoadingSearchResult,
   LoadMore,
   Main,
@@ -44,4 +47,5 @@ export {
   SkipNavigationLink,
   TaxonomyTerms,
   Testimonials,
+  Sidebar,
 };

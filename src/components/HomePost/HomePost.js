@@ -3,9 +3,8 @@ import Link from 'next/link';
 import { Heading, FeaturedImage, PostInfo } from 'components';
 import appConfig from 'app.config';
 import useFocusFirstNewResult from 'hooks/useFocusFirstNewResult';
-import retrieveExcerptFirstSentence from 'hooks/retrieveExcerptFirstSentence';
 
-import styles from './Posts.module.scss';
+import styles from './HomePost.module.scss';
 
 /**
  * Renders a list of Post items
@@ -15,20 +14,8 @@ import styles from './Posts.module.scss';
  * @param {string} props.intro Message to show as an introduction text.
  * @returns {React.ReactElement} The Projects component
  */
-/*** Start: Function to retrieve first sentence of post excerpt for display ***/
-// function retrieve_first_sentence(excerpt) {
-//   if (typeof(excerpt) == 'string') {
-//     let sentences = excerpt.match(/^(.*?)[\!\?\.\n](<\/p>)?/g); // Match excerpt if ends with ?, !, ., or newline char followed with whitespace or </p> tag
-//     if (typeof(sentences) == 'object') {  // if matched sentences are of type object, proceeds to retrieve first one
-//       let firstSentence = sentences.shift();  // Returns 1st array element from split excerpt
-//       return firstSentence;
-//     }
-//   }
-//   return;
-// }
-/*** Final: Function to retrieve first sentence of post excerpt for display ***/
 
-function Posts({ posts, intro, id }) {
+function HomePost({ posts, intro, id }) {
   const { firstNewResultRef, firstNewResultIndex } =
     useFocusFirstNewResult(posts);
 
@@ -36,7 +23,7 @@ function Posts({ posts, intro, id }) {
     // eslint-disable-next-line react/jsx-props-no-spreading
     <section {...(id && { id })}>
       {intro && <p>{intro}</p>}
-      <div className={styles['post-list']}>
+      <div className={styles['featured-post']}>
         {posts?.map((post, i) => {
           const isFirstNewResult = i === firstNewResultIndex;
           let image = post?.featuredImage?.node;
@@ -65,20 +52,16 @@ function Posts({ posts, intro, id }) {
                     />
                   </a>
                 </Link>
-
-                <Heading level="h4" className={styles.header}>
-                  <Link href={post?.uri ?? '#'}>
-                    <a ref={isFirstNewResult ? firstNewResultRef : null}>
-                      {post.title()}
-                    </a>
-                  </Link>
-                </Heading>
-                <PostInfo
-                  className={styles.info}
-                  /* author={post?.author?.node?.name} */
-                  /* date={post?.date} */
-                />
-                <div className="excerpt" dangerouslySetInnerHTML={{ __html: retrieveExcerptFirstSentence(post.excerpt()) ?? '' }} />
+                <div className={styles[`card-info-container`]}>
+                  <Heading level="h2" className={styles.header}>
+                    <Link href={post?.uri ?? '#'}>
+                      <a ref={isFirstNewResult ? firstNewResultRef : null}>
+                        {post.title()}
+                      </a>
+                    </Link>
+                  </Heading>
+                  <div className="excerpt" dangerouslySetInnerHTML={{ __html: post.excerpt() ?? '' }} />
+                </div>
               </div>
             </div>
           );
@@ -89,4 +72,4 @@ function Posts({ posts, intro, id }) {
   );
 }
 
-export default Posts;
+export default HomePost;

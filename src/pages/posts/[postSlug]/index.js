@@ -1,3 +1,6 @@
+/*** 
+* Info: Single Post Page 
+***/
 import { getNextStaticProps, is404 } from '@faustjs/next';
 import { client } from 'client';
 import {
@@ -37,8 +40,8 @@ export function PostComponent({ post }) {
         />
         <div className="container">
           <ContentWrapper content={post?.content()}>
-            <TaxonomyTerms post={post} taxonomy={'categories'} />
-            <TaxonomyTerms post={post} taxonomy={'tags'} />
+            {/* <TaxonomyTerms post={post} taxonomy={'categories'} /> */}
+            {/* <TaxonomyTerms post={post} taxonomy={'tags'} /> */}
           </ContentWrapper>
         </div>
       </Main>

@@ -1,9 +1,14 @@
+/*** 
+* Info: 404 Page (Not Found)
+* Description: Displays when url is not available on site
+***/
 import { getNextStaticProps } from '@faustjs/next';
 import { client } from 'client';
 import { Button, Footer, Header, EntryHeader, Main, SEO } from 'components';
 import { useRouter } from 'next/router';
 import React, { useState } from 'react';
 import { pageTitle } from 'utils';
+import { FaSearch } from 'react-icons/fa';
 import styles from 'styles/pages/_404.module.scss';
 
 export default function Page() {
@@ -19,12 +24,10 @@ export default function Page() {
       <Header />
 
       <Main>
-        <EntryHeader title="Not found, error 404" />
+        <EntryHeader title="Page Not Found" />
         <div className="container small">
           <p className="text-center">
-            Oops, the page you are looking for does not exist or is no longer
-            available. Everything is still awesome. Just use the search form to
-            find your way.
+            Not the content you're looking for. Use the search field below to help.
           </p>
 
           <form
@@ -38,9 +41,10 @@ export default function Page() {
               });
             }}
           >
-            <label htmlFor="404-search-input" className="sr-only">
+            {/* <label htmlFor="404-search-input" className="sr-only">
               Search
-            </label>
+            </label> */}
+
             <input
               id="404-search-input"
               name="404-search-input"
@@ -48,10 +52,14 @@ export default function Page() {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Start typing..."
             />
 
             <Button styleType="secondary" role="submit">
-              Search
+              <FaSearch className={styles.icon} />
+              <label className="sr-only" htmlFor="search">
+                Search
+              </label>
             </Button>
           </form>
         </div>

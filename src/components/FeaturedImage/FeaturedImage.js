@@ -31,15 +31,22 @@ export default function FeaturedImage({
 
   return src && width && height ? (
     <figure className={cn([styles['featured-image'], className])}>
-      <Image
+      {/* <Image
         src={src}
         width={width}
         height={height}
+        sizes="(max-width: 620px) 100vw,
+              (max-width: 620px) 50vw,
+              33vw"
         alt={altText}
         objectFit="cover"
         layout="responsive"
         {...props}
-      />
+      /> */}
+      {/* <span className={cn([styles['image-container']])}>
+        <span className={cn([styles['image-pre-span']])}></span> */}
+        <img src={src} alt={altText}  width={width} height={height} sizes="(max-width: 620px) 100vw, (max-width: 620px) 50vw, 33vw" />
+      {/* </span> */}
     </figure>
   ) : null;
 }

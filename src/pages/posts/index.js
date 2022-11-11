@@ -1,3 +1,7 @@
+/*** 
+* Info: Blog Page
+* Description: Displays list of posts
+***/
 import React from 'react';
 import { getNextStaticProps } from '@faustjs/next';
 import { client } from 'client';
@@ -52,7 +56,7 @@ export default function Page() {
       <Header />
 
       <Main>
-        <EntryHeader title="Latest Posts" />
+        <EntryHeader title="" />
         <div className="container">
           <Posts posts={data?.nodes} id="posts-list" />
           <LoadMore

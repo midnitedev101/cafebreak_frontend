@@ -1,3 +1,7 @@
+/*** 
+* Info: Search Page
+* Description: Displays the search page
+***/
 import { getNextStaticProps } from '@faustjs/next';
 import { client } from 'client';
 import {
@@ -63,7 +67,7 @@ export default function Page() {
             </div>
           )}
 
-          {!isLoading && searchResults === null && <SearchRecommendations />}
+          {/* {!isLoading && searchResults === null && <SearchRecommendations />} */}
         </div>
       </Main>
 

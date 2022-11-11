@@ -1,0 +1,11 @@
+@import 'styles/Variables';
+
+.sidebar {
+    display: block;
+    padding: 0 2rem;
+    @media (min-width: $breakpoint-medium) {
+        display: inline-block;
+        width: 33.33333333%;
+        vertical-align: top;
+    }
+}

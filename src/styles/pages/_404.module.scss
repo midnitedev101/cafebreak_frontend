@@ -4,6 +4,23 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  button {
+    position: absolute;
+    font-size: 2rem;
+    // top: 50%;
+    left: 5%;
+    // transform: translateY(-50%);
+    color: var(--color-black);
+    padding: unset;
+    margin: 11px 0 11px 11px;
+    &:hover {
+      border-color: var(--color-primary);
+      background-color: var(--color-primary);
+    }
+    svg {
+      color: var(--color-black);
+    }
+  }
 }
 
 .search-input {
@@ -15,11 +32,11 @@
   font-size: 1.5rem;
   line-height: 1.5;
   margin: 0;
-  padding: 1rem;
   border: 1px solid var(--color-black);
+  padding: 1rem 1.5rem 1rem 5rem;
 
   @media (min-width: $breakpoint-small) {
-    width: 80%;
+    width: 100%;
   }
 
   margin-bottom: 2rem;

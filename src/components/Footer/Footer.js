@@ -9,6 +9,8 @@ import {
   FaTwitter,
   FaYoutube,
 } from 'react-icons/fa';
+import Image from 'next/image';
+import Link from 'next/link';
 import { NavigationMenu } from 'components';
 
 import styles from './Footer.module.scss';
@@ -21,7 +23,7 @@ export default function Footer() {
   return (
     <footer className={styles.footer}>
       <div className="container">
-        {appConfig?.socialLinks && (
+        {/* {appConfig?.socialLinks && (
           <div className={styles['social-links']}>
             <ul aria-label="Social media">
               {appConfig.socialLinks?.twitterUrl && (
@@ -121,7 +123,21 @@ export default function Footer() {
               )}
             </ul>
           </div>
-        )}
+        )} */}
+        <div className={styles['logo']}>
+          <Link href="/">
+            <a title="Home">
+              {/* <Image
+                src="/static/cafebreak_landscape_logo.webp"
+                width={180}
+                height={42}
+                alt="CafeBreak footer logo"
+                layout="responsive"
+              /> */}
+              <img src="/static/cafebreak_landscape_logo.webp" alt="CafeBreak Footer Logo" width="180" height="42"/>
+            </a>
+          </Link>
+        </div>
 
         <NavigationMenu
           className={styles.nav}
@@ -129,8 +145,8 @@ export default function Footer() {
         />
 
         <div className={styles.copyright}>
-          &copy; {new Date().getFullYear()} Blueprint Media &#183; Powered By{' '}
-          <a href="https://wpengine.com/atlas">Atlas</a>
+          &copy; {new Date().getFullYear()} CafeBreak. All rights reserved. {/* &#183; Powered By{' '} */}
+          {/* <a href="https://wpengine.com/atlas">Atlas</a> */}
         </div>
       </div>
     </footer>

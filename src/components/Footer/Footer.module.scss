@@ -5,16 +5,25 @@
   background-color: var(--color-primary);
   padding: 3rem;
   margin-top: 4rem;
-  color: var(--color-white);
+  color: var(--color-black);
 
   a {
-    color: var(--color-white);
+    color: var(--color-black);
     text-decoration: underline;
 
     &:hover,
     &:focus {
-      color: var(--color-white);
+      color: var(--color-tertiary);
     }
+  }
+}
+
+.logo {
+  width: 180px;
+  height: auto;
+  margin: 1.5rem auto;
+  @media (min-width: $breakpoint-small) {
+    margin-left: -2rem;
   }
 }
 
@@ -43,29 +52,29 @@
     width: 4rem;
     height: 4rem;
     padding: 1rem;
-    border: 1px solid var(--color-white);
+    border: 1px solid var(--color-primary);
     border-radius: 99rem;
     vertical-align: middle;
     font-size: 2rem;
     justify-content: center;
     align-items: center;
-    color: var(--color-white);
+    color: var(--color-black);
     background-color: transparent;
     transition: background-color 0.1s ease-in-out;
 
     .social-icon {
-      color: var(--color-white);
+      color: var(--color-black);
       vertical-align: middle;
       transition: color 0.1s ease-in-out;
     }
 
     &:hover,
     &:focus {
-      color: var(--color-primary);
-      background-color: var(--color-white);
+      color: var(--color-tertiary);
+      background-color: var(--color-primary);
 
       .social-icon {
-        color: var(--color-primary);
+        color: var(--color-tertiary);
       }
     }
   }
@@ -76,7 +85,11 @@
   justify-content: center;
   margin-bottom: 3rem;
   margin-right: auto;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
+
+  @media (min-width: $breakpoint-small) {
+    justify-content: start;
+  }
 
   ul {
     display: inline-flex;
@@ -94,10 +107,12 @@
   li {
     margin: 0;
     margin-bottom: 1rem;
+    text-align: center;
 
     @media (min-width: $breakpoint-small) {
       margin-right: 3rem;
       margin-bottom: 0;
+      text-align: left;
     }
 
     &:last-child {
@@ -109,7 +124,7 @@
       text-decoration: none;
 
       &:hover {
-        text-decoration: underline;
+        text-decoration: none;
       }
     }
   }
@@ -118,4 +133,7 @@
 .copyright {
   text-align: center;
   font-size: 1.5rem;
+  @media (min-width: $breakpoint-small) {
+    text-align: left;
+  }
 }
