@@ -54,7 +54,7 @@ export default function Page() {
   });
   // const testimonials = useQuery().testimonials();
   const mainBanner = {
-    sourceUrl: '/static/banner.jpeg',
+    sourceUrl: '/static/banner_2.webp',
     mediaDetails: { width: 1200, height: 600 },
     altText: 'Blog Banner',
   };
